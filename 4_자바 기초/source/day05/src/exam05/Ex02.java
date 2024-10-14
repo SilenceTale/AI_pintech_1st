@@ -1,7 +1,8 @@
-package exam04;
+package exam05;
 
 public class Ex02 {
     public static void main(String[] args) {
-        C c = new C();
+        //LoginService s1 = new LoginService();
+
     }
 }
