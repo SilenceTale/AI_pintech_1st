@@ -14,7 +14,7 @@ public class BoardViewController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher rd = req.getRequestDispatcher("/WEP-INF/templates/board/view.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/templates/board/view.jsp");
         rd.forward(req, resp);
     }
     /*    @Override
