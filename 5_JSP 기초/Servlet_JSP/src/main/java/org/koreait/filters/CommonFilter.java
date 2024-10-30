@@ -6,10 +6,10 @@ import jakarta.servlet.annotation.WebInitParam;
 
 import java.io.IOException;
 
-@WebFilter(value = "/*", initParams = {
-        @WebInitParam(name="k1", value="v1"),
-        @WebInitParam(name="k2", value="v2")
-}) // 모든 요청 관리에서 필터를 사용한다 (필터부분 못들음 ㅈㅅ)
+//@WebFilter(value = "/*", initParams = {
+//        @WebInitParam(name="k1", value="v1"),
+//        @WebInitParam(name="k2", value="v2")
+//}) // 모든 요청 관리에서 필터를 사용한다 (필터부분 못들음 ㅈㅅ)
 public class CommonFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
