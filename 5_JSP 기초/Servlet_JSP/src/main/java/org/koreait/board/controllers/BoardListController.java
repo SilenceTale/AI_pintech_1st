@@ -20,5 +20,6 @@ public class BoardListController extends HttpServlet {
 
         PrintWriter out = resp.getWriter();
         out.write("<h1>게시판 목록!<h1>");
+
     }
 }
