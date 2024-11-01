@@ -1,8 +1,9 @@
 package exam01;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Book {
+public class Book implements Comparable {
     private int isdn;
     private String title;
     private String author;
@@ -36,5 +37,10 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
