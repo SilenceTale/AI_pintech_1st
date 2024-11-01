@@ -13,5 +13,7 @@ public class Ex01 {
         items.add("이름3");
         items.add("이름4");
         items.add("이름5");
+
+        System.out.println(items);
     }
 }
