@@ -10,7 +10,7 @@ public class JoinServiceTest {
     @Test
     void test1() {
         Validator<RequestJoin> validator = new AdvancedJoinValidator();
-        JoinService joinService = new JoinService(validator);
+        JoinService joinService = new JoinService();
 
 
     }
