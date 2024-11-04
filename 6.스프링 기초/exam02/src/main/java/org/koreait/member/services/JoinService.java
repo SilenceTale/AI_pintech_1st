@@ -21,9 +21,9 @@ public class JoinService {
     /**
      * 가입 처리
      */
-    public void process(RequestJoin form) {
+    public void process(RequestJoin form) { // 캡슐화?
         validator.validate(form); // RequestJoin 유효성 검사
 
-        repository.register(form); // 영구 저장 처리
+        repository.register(form); // DB 영구 저장 처리
     }
 }
