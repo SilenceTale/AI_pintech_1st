@@ -17,6 +17,7 @@ public class Ex01 {
     void test1() { //ApplicationContext -> Spring 컨테이너 / 실제로 객체를 만들어 주는 것은 AnnotationConfigApplicationContext임
 //        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx.class);
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx3.class);
+        //1) 객체 생성, 2) 의존성 주입, 3) 초기화 -> 모든 완성된 객체가 컨테이너 안에 있다.
 
 //        JoinService service = ctx.getBean("joinService", JoinService.class);
         JoinService service = ctx.getBean(JoinService.class); // 이렇게 짧게 활용도 가능하며, 이대로 조회도 가능하다.

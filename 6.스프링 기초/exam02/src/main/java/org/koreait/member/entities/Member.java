@@ -12,4 +12,6 @@ public class Member {
     private String userName; // 회원명
     private LocalDateTime regDt; // 회원 정보 가입 일시
     private LocalDateTime modDt; // 회원 정보 수정 일시
+
+    private String regDtStr;
 }
