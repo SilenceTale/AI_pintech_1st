@@ -2,6 +2,9 @@ package org.koreait.member.controllers;
 
 import lombok.Data;
 
+/**
+ * 회원 가입 양식
+ */
 @Data
 public class RequestJoin {
     private String email;
