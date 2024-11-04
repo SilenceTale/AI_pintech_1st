@@ -3,6 +3,7 @@ package org.koreait.exam01;
 import org.junit.jupiter.api.Test;
 import org.koreait.global.configs.AppCtx;
 import org.koreait.global.configs.AppCtx2;
+import org.koreait.global.configs.AppCtx3;
 import org.koreait.member.controllers.RequestJoin;
 import org.koreait.member.services.InfoService;
 import org.koreait.member.services.JoinService;
@@ -14,7 +15,8 @@ import java.time.format.DateTimeFormatter;
 public class Ex01 {
     @Test
     void test1() { //ApplicationContext -> Spring 컨테이너 / 실제로 객체를 만들어 주는 것은 AnnotationConfigApplicationContext임
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+//        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx3.class);
 
 //        JoinService service = ctx.getBean("joinService", JoinService.class);
         JoinService service = ctx.getBean(JoinService.class); // 이렇게 짧게 활용도 가능하며, 이대로 조회도 가능하다.
