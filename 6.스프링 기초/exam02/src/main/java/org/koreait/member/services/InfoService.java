@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
-public class InfoService {
+public class InfoService { // 빈의 이름은 infoService
 
     private MemberRepository repository;
 

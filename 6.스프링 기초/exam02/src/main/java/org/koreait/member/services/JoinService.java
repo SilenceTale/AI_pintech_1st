@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 // 회원 가입 기능
 @Service
 @RequiredArgsConstructor
-public class JoinService {
+public class JoinService { // 빈 이름 joinService
 
 
     // 변수로 의존성 확장!
@@ -28,6 +28,7 @@ public class JoinService {
     public MemberRepository repository;
      */
 
+//    public final JoinValidator validator;
     public final JoinValidator validator;
     public final MemberRepository repository;
 
