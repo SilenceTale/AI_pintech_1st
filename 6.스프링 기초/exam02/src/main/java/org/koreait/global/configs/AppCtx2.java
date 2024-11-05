@@ -5,11 +5,14 @@ import org.springframework.context.annotation.Configuration;
 
 import java.time.format.DateTimeFormatter;
 
-@Configuration // 설정 클래스
+@Configuration
 public class AppCtx2 {
 
+
+    // 날짜 출력 형식 바꾸는
     @Bean
     public DateTimeFormatter dateTimeFormatter() {
-        return DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss");
+
+        return DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss:ms");
     }
 }
