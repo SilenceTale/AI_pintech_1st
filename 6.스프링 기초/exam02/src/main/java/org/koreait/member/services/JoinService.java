@@ -1,5 +1,6 @@
 package org.koreait.member.services;
 
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.koreait.member.controllers.RequestJoin;
 import org.koreait.member.repositories.MemberRepository;
@@ -30,6 +31,8 @@ public class JoinService { // 빈 이름 joinService
 
 //    public final JoinValidator validator;
     public final JoinValidator validator;
+
+    @NonNull
     public final MemberRepository repository;
 
     /*

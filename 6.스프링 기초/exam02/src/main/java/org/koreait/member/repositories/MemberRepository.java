@@ -17,7 +17,7 @@ import java.util.Map;
  DB에 영구 저장 처리 OR 조회 OR 삭제 처리
  */
 @Repository
-public class MemberRepository {
+public class MemberRepository { // memberRepository로 이름이 결정됨.
 
 
     // 반드시 내가 생성한 entities에 있는 Member 가져오기
