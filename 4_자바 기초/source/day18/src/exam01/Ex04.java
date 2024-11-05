@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public class Ex04 {
     public static void main(String[] args) {
-        List<String> items2 = List.of("항목1", "항목1", "항목1", "항목2", "항목3", "항목4", "항목5");
+        List<String> items2 = List.of("내껀데?1", "내껀데?1", "내껀데?1", "내껀데?2", "내껀데?3", "내껀데?4", "내껀데?5");
 
         Stream<String> stm = items2.stream().distinct().map(s -> String.format("(☞ﾟヮﾟ)☞%s☜(ﾟヮﾟ☜)", s));
         // 중간 연산
