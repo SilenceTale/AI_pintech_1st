@@ -2,6 +2,7 @@
 
 package org.koreait.member.repositories;
 
+import org.koreait.global.configs.ManualBean;
 import org.koreait.member.controllers.RequestJoin;
 import org.koreait.member.entities.Member;
 import org.springframework.stereotype.Repository;
@@ -17,6 +18,7 @@ import java.util.Map;
  DB에 영구 저장 처리 OR 조회 OR 삭제 처리
  */
 @Repository
+@ManualBean
 public class MemberRepository { // memberRepository로 이름이 결정됨.
 
 
