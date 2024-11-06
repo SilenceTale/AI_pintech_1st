@@ -3,7 +3,9 @@ package org.koreait.config;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 
+@Order(2)
 @Aspect
 public class SpringProxyCalculator {
 
@@ -11,6 +13,7 @@ public class SpringProxyCalculator {
     public void publicTarget() {
 
     }
+
     /*
     @Before("publicTarget()")
     public void beforeProcess(JoinPoint joinPoint) {
@@ -22,13 +25,13 @@ public class SpringProxyCalculator {
         System.out.println("@After() 효과 발동!");
     }
     */
-    @Around("publicTarget()")
+    //@Around("publicTarget()")
+    @Around("CommonPointcut.publicTarget()")
     public Object process(ProceedingJoinPoint joinPoint) throws Throwable {
         long stime = System.nanoTime();// 공통 기능
         try {
 
             Object result = joinPoint.proceed(); // 핵심 기능을 대신 수행
-
             System.out.println("HO출!");
 
             return result;
