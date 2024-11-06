@@ -21,7 +21,12 @@ public class AppCtx {
     }
 
     @Bean
-    public RecCalculator calculator() {
+    public Calculator calculator() {
         return new RecCalculator();
     }
+/*
+    @Bean
+    public RecCalculator calculator() {
+        return new RecCalculator();
+    }*/
 }
