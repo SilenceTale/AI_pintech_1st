@@ -25,6 +25,6 @@ public class PerformanceHandler implements InvocationHandler {
         long etime = System.nanoTime(); // 공통 기능
 
         System.out.printf("걸린시간: %d%n", etime - stime);
-    }
+        }
     }
 }
