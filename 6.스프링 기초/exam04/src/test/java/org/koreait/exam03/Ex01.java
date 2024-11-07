@@ -21,17 +21,23 @@ public class Ex01 {
     void test1() {
         List<Member> items = repository.findAll();
         items.forEach(System.out::println);
+        // 이거 왜 오류뜨는지 전혀 모르겠어요
     }
 
     @Test
     void test2() {
         repository.deleteById(1L);
-        // 이거 왜 오류뜨는지 전혀 모르겠어요;;
     }
 
     @Test
     void test3() {
         Member member = repository.findByEmail("user03@test.org").get();
         System.out.println(member);
+    }
+
+    @Test
+    void test4() {
+        List<Member> items = repository.findByUsernameContainingOrderBySeqDesc("사용");
+        items.forEach(System.out::println);
     }
 }

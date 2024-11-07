@@ -45,6 +45,7 @@ public class DBConfig extends AbstractJdbcConfiguration {
         return tm;
     }
 
+    @Bean
     public NamedParameterJdbcOperations namedParameterJdbcOperations(DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);
     }
