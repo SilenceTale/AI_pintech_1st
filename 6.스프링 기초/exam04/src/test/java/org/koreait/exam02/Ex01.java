@@ -3,10 +3,16 @@ package org.koreait.exam02;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.koreait.global.configs.AppCtx;
+import org.koreait.member.entities.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
 
 @SpringJUnitConfig
 @ContextConfiguration(classes = AppCtx.class)
@@ -36,5 +42,11 @@ public class Ex01 {
     @DisplayName("SELECT 쿼리 테스트")
     void test3() {
         String sql = "SELECT * FROM MEMBER";
+        List<Member> members = jdbcTemplate.query(sql, new RowMapper<Member>() {
+            @Override
+            public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return null;
+            }
+        });
     }
 }
