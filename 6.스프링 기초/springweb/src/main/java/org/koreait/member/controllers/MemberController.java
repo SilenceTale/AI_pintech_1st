@@ -25,6 +25,8 @@ public class MemberController {
     // headers는 요청 헤더에 Authorization 값이 있는 경우만 유입
     //@GetMapping(path = "/login", headers = "Authorization")
     @GetMapping("/login")
+    // produces = "application/json" - 응답 헤더 Content-Type : application/json
+    //@GetMapping(path="/login", produces = "application/json")
     public String login() {
 
         System.out.println("로그인 양식!");
@@ -47,6 +49,6 @@ public class MemberController {
     @PostMapping("/join") // /member/join 주소 맵핑
     public String joinPs() {
 
-        return "member/joinform";
+        return "member/joinForm";
     }
 }
