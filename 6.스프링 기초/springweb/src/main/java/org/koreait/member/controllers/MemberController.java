@@ -41,14 +41,20 @@ public class MemberController {
     }
 
     @GetMapping("/join")  // /member/join 주소 맵핑
-    public String join() {
+    public String join() { // 회원 가입 양식
 
         return "member/joinForm";
     }
 
     @PostMapping("/join") // /member/join 주소 맵핑
-    public String joinPs() {
+    public String joinPs() { // 회원 가입 처리
+        /**
+         * 회원 가입 처리 완료 후 주소 이동(로그인 페이지)
+         * 응답 헤더 Location : /springweb/member/login
+         * HttpServletResponse
+         * response.sendRedirect(request.getContextPah() + "/member/login");
+         */
 
-        return "member/joinForm";
+        return "redirect:/member/login"; // 응답 헤더 Location: /springweb/member/login
     }
 }
