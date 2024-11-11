@@ -1,86 +1,52 @@
 package org.koreait.member.controllers;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/member")
 public class MemberController {
 
-    @Autowired
-    private HttpServletRequest request;
-
-    @Autowired
-    private HttpServletResponse response;
-
-    @Autowired
-    private HttpSession session;
+    //@GetMapping("/member/login")
     /*
-    @GetMapping("/member/login")
-    public String login(/*@RequestParam("name") String name) {
-
-          System.out.printf("name:%s%n", name);
-
-          return "member/form";
-    } */
-
-//    @GetMapping("/member/login")
-//    public ModelAndView login() {
-//        ModelAndView mv = new ModelAndView();
-//
-//        mv.addObject("message", "안녕하세요"); // 서버에서 사용할 속성(Attribute)
-//        mv.setViewName("member/form"); // templates 경로
-//
-//        return mv;
-//    }
-
-    /*public String login() {
-
-        System.out.println(request);
-        System.out.println(response);
-        System.out.println(session);
-
-        return "member/form"; // 뷰를 찾기 위한 정보이다.
-        // /WEB-INF/templates/member/form.jsp
-    }*/
-    /*
-    public String login(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
-        System.out.println(request);
-        System.out.println(response);
-        System.out.println(session);
-
-        return "member/form";
-    }
-        */
-
-
-    @GetMapping("/member/login")
-    public String login(Model model) {
-        model.addAttribute("message", "안녕하세요");
-
-        return "member/form";
-    }
-
-    @PostMapping("/member/login")
-    public String loginPs(RequestLogin form) {
-
-        System.out.println(form);
-
-        return "member/form";
-    }
-/*
-    @PostMapping("/member/login")
-    public String loginPs(@RequestParam("email") String email, @RequestParam("password") String pass,
-                          @RequestParam(name="saveEmail", required = false) boolean saveEmail) {
-        System.out.println("회원가입 처리쪽 유입!!");
-        System.out.printf("email=%s, password=%s, saveEmail=%s%n", email, pass, saveEmail);
-
+    @RequestMapping(path={"/member/login", "/user/login"},
+            method = {RequestMethod.GET, RequestMethod.POST})
+    public String login() {
+        System.out.println("로그인 페이지 유입!");
         return "member/form";
     }*/
+
+    // /member/login?type=어떤 값
+    //@GetMapping(path = "/login", params = {"type"}) // /member/login 주소 맵핑
+
+    // headers는 요청 헤더에 Authorization 값이 있는 경우만 유입
+    //@GetMapping(path = "/login", headers = "Authorization")
+    @GetMapping("/login")
+    public String login() {
+
+        System.out.println("로그인 양식!");
+
+        return "member/form";
+    }
+
+    @PostMapping("/login")   // /member/login 주소 맵핑
+    public String loginPs() {
+
+        return "member/form";
+    }
+
+    @GetMapping("/join")  // /member/join 주소 맵핑
+    public String join() {
+
+        return "member/joinForm";
+    }
+
+    @PostMapping("/join") // /member/join 주소 맵핑
+    public String joinPs() {
+
+        return "member/joinform";
+    }
 }
