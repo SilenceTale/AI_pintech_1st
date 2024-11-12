@@ -22,7 +22,7 @@ public class MemberController { // /member/login, /member/join 사용할 것임.
         form.setEmail("user01@test.org");
         form.setPassword("12345678");
         form.setConfirmPassword("12345678");
-        form.setName("엄준식01");
+        form.setName("(⌐■_■)와칸다포에버");
 
         model.addAttribute("requestJoin", form);
 
