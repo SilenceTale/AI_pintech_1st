@@ -14,6 +14,7 @@ public class MessageSourceConfig {
 
         ms.addBasenames("messages.commons"); //properties 파일만 사용가능.
         ms.setDefaultEncoding("UTF-8"); // 디폴트 인코딩을 "UTF-8"로 설정함.
+
         return ms;
     }
 }
