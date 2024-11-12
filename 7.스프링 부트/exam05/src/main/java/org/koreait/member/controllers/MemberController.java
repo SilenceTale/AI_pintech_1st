@@ -43,10 +43,10 @@ public class MemberController { // /member/login, /member/join 사용할 것임.
                     Member member = new Member();
                     member.setSeq(i);
                     member.setEmail("user" + i + "@test.org");
-                    member.setName("엄준식" + i);
+                    member.setName("<h1>사용자" + i + "</h1>");
                     member.setPassword("12345678");
-                    member.setRegDT(LocalDateTime.now());
-                    member.setModDT(LocalDateTime.now());
+                    member.setRegDt(LocalDateTime.now());
+                    member.setModDt(LocalDateTime.now());
 
                     return member;
                 }).toList();
