@@ -42,7 +42,8 @@ public class MemberController { // /member/login, /member/join 사용할 것임.
                 .mapToObj(i -> {
                     Member member = new Member();
                     member.setSeq(i);
-                    member.setName("엄준식01" + i);
+                    member.setEmail("user" + i + "@test.org");
+                    member.setName("엄준식" + i);
                     member.setPassword("12345678");
                     member.setRegDT(LocalDateTime.now());
                     member.setModDT(LocalDateTime.now());
