@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.Arrays;
+
 @Controller
 @RequestMapping("/member")
 public class MemberController {
@@ -52,6 +54,9 @@ public class MemberController {
         System.out.println(form); // 커맨드 객체는 자동으로 EL 속성으로 추가, 속성명이 클래스명, 앞자는 소문자 RequestJoin -> requestJoin
 
 
+
+        //String[] hobby = form.getHobby();
+        //System.out.println(Arrays.toString(hobby));
         //model.addAttribute("requestJoin", form);
 
         /**
