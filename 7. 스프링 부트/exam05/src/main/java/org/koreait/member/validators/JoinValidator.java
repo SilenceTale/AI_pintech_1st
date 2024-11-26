@@ -10,8 +10,7 @@ import org.springframework.validation.Validator;
 public class JoinValidator implements Validator, MobileValidator {
     /**
      * 검증을 할 커맨드 객체를 한정
-     * RequestJoin 커맨드 객체만을 검증한다!
-     *
+     *  RequestJoin 커맨드 객체만을 검증할거야!
      */
     @Override
     public boolean supports(Class<?> clazz) {
@@ -19,7 +18,7 @@ public class JoinValidator implements Validator, MobileValidator {
     }
 
     /**
-     * 커멘드 객체 검증 수행
+     * 커맨드 객체 검증 수행
      *
      * Object target : 검증할 커맨드 객체
      * Errors errors
@@ -32,7 +31,7 @@ public class JoinValidator implements Validator, MobileValidator {
 
         /**
          * 필수 항목 검증 S
-         * email, password, confirmPassword, name, agree : 필수 항목
+         * email, password, confirmPassword, name, agree
          */
 
         String email = form.getEmail();
@@ -42,11 +41,11 @@ public class JoinValidator implements Validator, MobileValidator {
         boolean agree = form.isAgree();
         /*
         if (email == null || email.isBlank()) {
-            errors.rejectValue("email", "Required", "이메일을 입력해주세요.");
+            errors.rejectValue("email", "Required", "이메일을 입력하세요.");
         }
 
         if (password == null || password.isBlank()) {
-            errors.rejectValue("password", "Required", "비밀번호를 입력하세요");
+            errors.rejectValue("password", "Required", "비밀번호를 입력하세요.");
         }
 
         if (confirmPassword == null || confirmPassword.isBlank()) {
@@ -54,45 +53,46 @@ public class JoinValidator implements Validator, MobileValidator {
         }
 
         if (name == null || name.isBlank()) {
-            errors.rejectValue("name", "Required", "회원명을 입력하세요");
+            errors.rejectValue("name", "Required", "회원명을 입력하세요.");
         }
 
         if (!agree) { // 약관에 동의하지 않은 경우!
-            errors.rejectValue("agree", "Agree", "약관에 동의해야 회원가입이 가능합니다.");
+            errors.rejectValue("agree", "Agree", "회원가입 약관에 동의해 주세요!");
         } */
-
-
         /*
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "Required", "이메일을 입력하세요");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "Required", "이메일을 입력하세요.");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "Required", "비밀번호를 입력하세요.");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "Required", "비밀번호를 확인하세요.");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "Required", "회원명을 입력하세요.");*/
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "Required", "회원명을 입력하세요.");
+        */
         /*
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "Required");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "Required");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "Required" );
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "Required");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "Required");
 
         if (!agree) { // 약관에 동의하지 않은 경우!
             errors.rejectValue("agree", "Agree");
-        }*/
+        } */
+        /* 필수항목 검증 E */
 
-        /* 필수 항목 검증 E */
 
         /* 비밀번호, 비밀번호 확인 일치 여부 체크 */
-        if (password != null && confirmPassword != null && !password.equals(confirmPassword)) {
-            errors.rejectValue("confirmPassword", "MissMatch");
+        if (password != null && confirmPassword != null
+                && !password.equals(confirmPassword)) {
+            errors.rejectValue("confirmPassword", "Mismatch");
         }
 
-        /* 휴대전화 번호 형식 체크 S */
+        /* 휴대전화번호 형식 체크 */
         String mobile = form.getMobile();
         if (mobile != null && !mobile.isBlank() && !checkMobile(mobile)) {
             errors.rejectValue("mobile", "Mobile");
         }
 
-        /*boolean result = false;
+        /*
+        boolean result = false;
         if (!result) {
-            errors.reject("Fail.join"); //특정 필드가 아닌, 일반적인 검증 실패
-        }*/
+            errors.reject("Fail.join"); // 특정 필드가 아닌 일반적인 검증 실패
+        } */
     }
 }

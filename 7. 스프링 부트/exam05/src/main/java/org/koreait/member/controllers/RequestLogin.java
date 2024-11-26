@@ -9,5 +9,5 @@ public class RequestLogin {
     private String email;
     @NotBlank
     private String password;
-    private boolean saveEmail; // 이메일 기억하기.
+    private boolean saveEmail; // 이메일 기억하기
 }
