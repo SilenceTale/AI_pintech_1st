@@ -2,7 +2,7 @@ package exam01;
 
 public class Ex03 {
     public static void main(String[] args) {
-        C c = new C(); //C -> B, A    // 다형성
+        C c = new C(); // C -> B, A   // 다형성
         A a = c;
         B b = c;
 
@@ -13,7 +13,6 @@ public class Ex03 {
         System.out.printf("b는 C에서 유래되었는가?%s%n", b instanceof C);
         System.out.printf("a는 B에서 유래되었는가?%s%n", a instanceof B);
         System.out.printf("a는 A에서 유래되었는가?%s%n", a instanceof A);
-        // 전부 true인 이유? -> a, b, c 객체는 다 동일, 유래도 동일한게 당연하다.
-        // 이것은 다형성임.
+        // 전부 true 이유? a, b, c 객체는 다 동일, 유래도 동일
     }
 }

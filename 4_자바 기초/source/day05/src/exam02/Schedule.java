@@ -22,19 +22,19 @@ public class Schedule {
     }
 
     public void setDay(int _day) {
-        if (month == 2 && _day > 28) { // 통제 가능
+        if (month == 2 && _day > 28) {  // 통제 가능
             _day = 28;
         }
 
         day = _day;
     }
 
-    public int getDay() { // get도 통제가 가능함. 통제가 가능한것은 함수 밖에 없음
+    public int getDay() {
 
         return day;
     }
 
     void showDate() {
-        System.out.printf("year=%d년 month=%d월 day=%d일 입니다.%n", year, month, day);
+        System.out.printf("year=%d, month=%d, day=%d%n", year, month, day);
     }
 }
