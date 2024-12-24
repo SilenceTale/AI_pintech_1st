@@ -6,6 +6,6 @@ public class Ex01 {
         s1.id = 1000;
         s1.name = "이이름";
         s1.major = "자바";
-        s1.Study();
+        s1.study();
     }
 }

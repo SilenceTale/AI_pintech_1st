@@ -5,7 +5,7 @@ public class Student {
     String name; // 이름
     String major; // 전공과목
 
-    void Study() {
-        System.out.printf("%s는 학번이 %d, 전공과목은 %s이고 %s를 공부한다.", name, id, major, major);
+    void study() {
+        System.out.printf("%s는 학번이 %d이고 %s를 공부한다.%n", name, id, major);
     }
 }

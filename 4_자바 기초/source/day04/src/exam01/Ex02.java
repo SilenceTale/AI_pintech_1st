@@ -6,6 +6,6 @@ public class Ex02 {
     }
 
     static void method1() {
-        System.out.println("반환값이 없는 함수");
+        System.out.println("반환값이 없는 함수!");
     }
 }

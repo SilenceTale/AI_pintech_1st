@@ -5,7 +5,7 @@ public class Ex11 {
         int num1 = 10;
         double num2 = 3.0;
 
-        double result = num1 / num2; // int -> double로 자동 형변환
+        double result = num1 / num2; // int -> double
         System.out.println(result);
     }
 }

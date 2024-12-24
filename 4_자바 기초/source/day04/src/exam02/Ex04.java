@@ -7,8 +7,8 @@ public class Ex04 {
 
         int result2 = add(20, 30);
         System.out.println(result2);
-
     }
+
     static int add(int num1, int num2) {
         return num1 + num2;
     }
